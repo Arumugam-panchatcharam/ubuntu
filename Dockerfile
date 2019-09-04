@@ -88,6 +88,10 @@ RUN mkdir -p /home/build/.ssh
 RUN echo -e "Host *\n\tStrictHostKeyChecking no\n" > /home/build/.ssh/config
 RUN chown -R build:build /home/build/.ssh
 
+RUN sudo locale-gen en_US.UTF-8
+RUN sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+RUN export LANG=en_US.UTF-8
+
 USER build
 ENV USER build
 WORKDIR /home/build
