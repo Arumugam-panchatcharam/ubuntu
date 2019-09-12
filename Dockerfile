@@ -13,7 +13,7 @@ RUN echo "dash dash/sh boolean false" | debconf-set-selections
 RUN DEBIAN_FRONTEND=noninteractive dpkg-reconfigure dash
 
 # Install the following utilities (required by poky)
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential chrpath curl diffstat gcc-multilib gawk git-core libsdl1.2-dev texinfo unzip wget xterm
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y build-essential chrpath curl diffstat gcc-multilib g++-4.8-multilib gawk git-core libsdl1.2-dev texinfo unzip wget xterm
 
 # Additional host packages
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y openssh-client coreutils libreadline-dev rpcbind nfs-common vim jq python python-setuptools python-yaml device-tree-compiler
