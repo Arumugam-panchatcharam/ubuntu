@@ -8,7 +8,7 @@ RUN apt-get update && apt-get -y upgrade
 RUN apt-get install -y build-essential chrpath curl diffstat gcc-multilib g++-4.8-multilib gawk git-core libsdl1.2-dev texinfo unzip wget xterm
 
 # Additional host packages
-RUN apt-get install -y openssh-client coreutils libreadline-dev rpcbind nfs-common vim jq squashfs-tools quilt mtd-utils libncurses5-dev libncursesw5-dev liblzo2-dev uuid-dev gdisk
+RUN apt-get install -y openssh-client coreutils realpath libreadline-dev rpcbind nfs-common vim jq squashfs-tools quilt mtd-utils libncurses5-dev libncursesw5-dev liblzo2-dev uuid-dev gdisk
 
 # Additional host packages required by poky/scripts/wic
 RUN apt-get install -y bzip2 dosfstools mtools parted syslinux tree gettext parallel bsdmainutils ca-certificates apt-transport-https dos2unix
